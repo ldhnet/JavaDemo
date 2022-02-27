@@ -2,7 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.example.mapper.SysUserMapper">
     <insert id="addUser">
-        insert into sysuser(username,password) values(#{user.username},#{user.password})
+        insert into sysuser(username,password,age,createtime.upadtetime)
+        values(#{user.username},#{user.password},#{user.age},#{createtime},#{updatetime})
     </insert>
 
     <select id="selectUserList" resultType="com.example.web.models.SysUser">
@@ -10,5 +11,8 @@
     </select>
     <select id="selectUserById" resultType="com.example.web.models.SysUser">
         select  * from sysuser where id=#{id}
+    </select>
+    <select id="getUserByName" resultType="com.example.web.models.SysUser">
+        select  * from sysuser where username=#{name}
     </select>
 </mapper>
