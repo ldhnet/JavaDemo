@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/demo/adduser}">
+  <input type="text" name="username"/>
+  <input type="text" name="password"/>
+  <input type="submit" value="注册">
+</form>
+<h1 th:text="${msg}"></h1>
+</body>
+</html>

@@ -14,7 +14,7 @@ public class DemoController {
     @Autowired
     private  SysUserMapper SysUserMapper;
 
-    @RequestMapping("/index")
+    @RequestMapping("/a")
     public String index(Model model) {
         SysUser _user=SysUserMapper.selectUserById(1);
         log.info(_user.getUsername());

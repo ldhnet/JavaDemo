@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<dev>
+    <form th:action="@{/demo/loginprocess}">
+        <input type="text" name="username"/>
+        <input type="text" name="password"/>
+        <input type="submit" value="登录" >
+    </form>
+</dev>
+<dev>
+    <a th:href="@{/demo/register}" name="注册"></a>
+</dev>
+
+</body>
+</html>
