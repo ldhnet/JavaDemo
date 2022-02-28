@@ -1,6 +1,7 @@
 package com.example.web.controller;
 
 import com.example.mapper.SysUserMapper;
+import com.example.utils.DateUtils;
 import com.example.web.models.SysUser;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
@@ -33,7 +34,7 @@ public class LoginController {
         String base64Pass = hashedPassWord.toHex();//转成16进制
         user.setPassword(base64Pass);
         user.setAge(20);
-        user.setCreatetime(new Date());
+        user.setCreatetime(DateUtils.getNowDate());
 
         userMapper.addUser(user);
         model.addAttribute("msg","添加成功");
