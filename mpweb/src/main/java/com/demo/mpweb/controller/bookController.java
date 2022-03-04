@@ -23,61 +23,34 @@ public class bookController {
     @Autowired
     private bookDao _bookDao;
 
-    @GetMapping("get")
-    public String guestbook() {
-        Book _book= bookService.getById(1);
-        return _book.toString();
-    }
-    @GetMapping("getQueryList")
-    public String getBookQueryList() {
-        QueryWrapper<Book> qw=new QueryWrapper<>();
-        qw.like("Name","5");
-        List<Book> list=_bookDao.selectList(qw);
-        System.out.println(list);
-
-        String name=null;
-        LambdaQueryWrapper<Book> lbqw=new LambdaQueryWrapper<>();
-
-        //if (name != null) lbqw.like(Book::getName,name);
-
-        lbqw.like(name != null,Book::getName,name);
-        List<Book> list2=_bookDao.selectList(lbqw);
-        System.out.println(list2);
-
-        return list.toString();
-    }
-
-
-    @GetMapping("getPageList")
-    public String guestBookPageList() {
-        List<Book> list2=bookService.list();
-
-        List<Book> list=bookService.getAll();
-        System.out.println(list);
-        return list.toString();
+    @GetMapping
+    public OperationResult getAll() {
+        return new OperationResult(true,bookService.list());
     }
 
     @PostMapping
-    public Boolean saveBook(@RequestBody Book book) {
-        return bookService.save(book);
+    public OperationResult saveBook(@RequestBody Book book) {
+        return new OperationResult(bookService.save(book));
     }
+
     @PutMapping
-    public Boolean updateBook(@RequestBody Book book) {
-        return bookService.updateById(book);
+    public OperationResult updateBook(@RequestBody Book book) {
+        return new OperationResult(bookService.updateById(book));
     }
 
     @DeleteMapping("/{id}")
-    public Boolean deleteBook(@PathVariable Integer id) {
-        return bookService.removeById(id);
+    public OperationResult deleteBook(@PathVariable Integer id) {
+        return new OperationResult(true,bookService.removeById(id));
+    }
+
+    @GetMapping("/{currentPage}/pageSize")
+    public OperationResult getPageList(@PathVariable int currentPage, @PathVariable int pageSize) {
+        IPage<Book> list=  bookService.getPage(1, 5);
+        return new OperationResult(true,list);
     }
 
     @GetMapping("/{id}")
     public Book getById(@PathVariable Integer id) {
         return bookService.getById(id);
-    }
-
-    @GetMapping("/{currentPage}/pageSize")
-    public IPage<Book> getPageList(@PathVariable int currentPage,@PathVariable int pageSize) {
-        return bookService.getPage(1,5);
     }
 }
