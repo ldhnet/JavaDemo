@@ -12,5 +12,6 @@ public interface IBookService extends IService<Book> {
 //    Book getById(Integer id);
 //    List<Book> getAll();
       IPage<Book> getPage(int currentPage,int pageSize);
+      IPage<Book> getPage(int currentPage,int pageSize,Book book);
       List<Book> getAll();
 }
