@@ -8,6 +8,7 @@ import com.demo.mpweb.domain.Book;
 import com.demo.mpweb.service.IBookService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.List;
@@ -21,6 +22,8 @@ class MpwebApplicationTests {
 	@Autowired
 	private IBookService bookService;
 
+	@Value("${spring.datasource.password}")
+	private String password;
 	@Test
 	void contextLoads() {
 		QueryWrapper<Book> qw=new QueryWrapper<>();
@@ -41,6 +44,8 @@ class MpwebApplicationTests {
 	@Test
 	void  getlist()
 	{
+
+
 		List<Book> list2=bookService.list();
 		System.out.println(list2);
 		List<Book> list=bookService.getAll();

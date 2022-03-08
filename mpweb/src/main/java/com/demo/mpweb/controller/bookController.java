@@ -7,22 +7,28 @@ import com.demo.mpweb.domain.Book;
 import com.demo.mpweb.service.IBookService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
+import java.util.logging.Logger;
 
 @Slf4j
 @RestController
 @RequestMapping("/books")
 public class bookController {
-
+    //private static final Logger log= LoggerFactory.getLogger(())
     @Autowired
     private IBookService bookService;
     @Autowired
     private bookDao _bookDao;
 
+    @Value("${spring.datasource.password}")
+    private String password;
+
     @GetMapping
     public OperationResult getAll() {
+        log.error("测试");
         return new OperationResult(true,bookService.list());
     }
 
@@ -50,6 +56,9 @@ public class bookController {
 
     @GetMapping("/{id}")
     public OperationResult getById(@PathVariable Integer id) {
+        System.out.println("hot deploy .....");
+        System.out.println("hot deploy .....");
+        System.out.println(password);
         return new OperationResult(true,bookService.getById(id));
     }
     @GetMapping("/{currentPage}/{pageSize}")
