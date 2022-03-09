@@ -8,17 +8,14 @@
         <version>2.6.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-
     <groupId>com.example</groupId>
-    <artifactId>redisdemo</artifactId>
+    <artifactId>jdbcdemo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>redisdemo</name>
-    <description>redisdemo</description>
-
+    <name>jdbcdemo</name>
+    <description>jdbcdemo</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -31,23 +28,25 @@
             <optional>true</optional>
         </dependency>
 
+        <!--jdbc temp-->
+
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
         </dependency>
 
         <dependency>
-            <groupId>redis.clients</groupId>
-            <artifactId>jedis</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
+        <!--end jdbc temp-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-
     </dependencies>
 
     <build>
