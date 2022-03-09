@@ -23,8 +23,8 @@ public class bookController {
     @Autowired
     private bookDao _bookDao;
 
-    @Value("${spring.datasource.password}")
-    private String password;
+    @Value("${server.port}")
+    private String _serverport;
 
     @GetMapping
     public OperationResult getAll() {
@@ -58,7 +58,7 @@ public class bookController {
     public OperationResult getById(@PathVariable Integer id) {
         System.out.println("hot deploy .....");
         System.out.println("hot deploy .....");
-        System.out.println(password);
+        System.out.println(_serverport);
         return new OperationResult(true,bookService.getById(id));
     }
     @GetMapping("/{currentPage}/{pageSize}")
