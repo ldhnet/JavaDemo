@@ -11,6 +11,9 @@ public interface IBookService extends IService<Book> {
 //    Boolean delete(Integer id);
 //    Book getById(Integer id);
 //    List<Book> getAll();
+      Boolean BatchSave(List<Book> books);
       IPage<Book> getPage(int currentPage,int pageSize);
       List<Book> getAll();
+      Book getCacheById(Integer id);
+      Book getById(Integer id);
 }

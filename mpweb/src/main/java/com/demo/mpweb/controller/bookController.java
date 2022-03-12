@@ -11,11 +11,12 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
 
 @Slf4j
 @RestController
-@RequestMapping("/book")
+@RequestMapping("/books")
 public class bookController {
 
     @Autowired
@@ -25,7 +26,7 @@ public class bookController {
 
     @GetMapping
     public OperationResult getAll() {
-        return new OperationResult(true,bookService.list());
+        return new OperationResult(true, bookService.list());
     }
 
     @PostMapping
@@ -40,17 +41,23 @@ public class bookController {
 
     @DeleteMapping("/{id}")
     public OperationResult deleteBook(@PathVariable Integer id) {
-        return new OperationResult(true,bookService.removeById(id));
+        return new OperationResult(true, bookService.removeById(id));
     }
 
-    @GetMapping("/{currentPage}/pageSize")
+    @GetMapping("/{currentPage}/{pageSize}")
     public OperationResult getPageList(@PathVariable int currentPage, @PathVariable int pageSize) {
-        IPage<Book> list=  bookService.getPage(1, 5);
-        return new OperationResult(true,list);
+        IPage<Book> list = bookService.getPage(currentPage, pageSize);
+        return new OperationResult(true, list);
     }
 
+    //    @GetMapping("/{id}")
+    //    public OperationResult getById(@PathVariable Integer id) {
+    //        Book model = bookService.getById(id);
+    //        return new OperationResult(true,model);
+    //    }
     @GetMapping("/{id}")
-    public Book getById(@PathVariable Integer id) {
-        return bookService.getById(id);
+    public OperationResult getById(@PathVariable Integer id) {
+        Book model = bookService.getById(id);
+        return new OperationResult(true, model);
     }
 }
