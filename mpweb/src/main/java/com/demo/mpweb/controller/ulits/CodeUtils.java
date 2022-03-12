@@ -1,4 +1,4 @@
-package com.demo.mpweb.utils;
+package com.demo.mpweb.controller.ulits;
 
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;

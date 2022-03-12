@@ -10,13 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
-<<<<<<< HEAD
-import java.util.HashMap;
-import java.util.List;
-=======
 import java.io.IOException;
 import java.util.logging.Logger;
->>>>>>> 6b37c5aad120acde5f37da58b02f4b230d62bfd6
 
 @Slf4j
 @RestController
@@ -33,12 +28,8 @@ public class bookController {
 
     @GetMapping
     public OperationResult getAll() {
-<<<<<<< HEAD
-        return new OperationResult(true, bookService.list());
-=======
         log.error("测试");
         return new OperationResult(true,bookService.list());
->>>>>>> 6b37c5aad120acde5f37da58b02f4b230d62bfd6
     }
 
     @PostMapping
@@ -60,27 +51,9 @@ public class bookController {
 
     @DeleteMapping("/{id}")
     public OperationResult deleteBook(@PathVariable Integer id) {
-        return new OperationResult(true, bookService.removeById(id));
+        return new OperationResult(true,bookService.removeById(id));
     }
 
-<<<<<<< HEAD
-    @GetMapping("/{currentPage}/{pageSize}")
-    public OperationResult getPageList(@PathVariable int currentPage, @PathVariable int pageSize) {
-        IPage<Book> list = bookService.getPage(currentPage, pageSize);
-        return new OperationResult(true, list);
-    }
-
-    //    @GetMapping("/{id}")
-    //    public OperationResult getById(@PathVariable Integer id) {
-    //        Book model = bookService.getById(id);
-    //        return new OperationResult(true,model);
-    //    }
-    @GetMapping("/{id}")
-    public OperationResult getById(@PathVariable Integer id) {
-        Book model = bookService.getById(id);
-        return new OperationResult(true, model);
-    }
-=======
     @GetMapping("/{id}")
     public OperationResult getById(@PathVariable Integer id) {
         System.out.println("hot deploy .....");
@@ -99,5 +72,4 @@ public class bookController {
         return new OperationResult(true,page);
     }
 
->>>>>>> 6b37c5aad120acde5f37da58b02f4b230d62bfd6
 }
