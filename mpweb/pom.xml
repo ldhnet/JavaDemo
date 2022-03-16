@@ -57,11 +57,11 @@
 		</dependency>
 
 		<!--Xmemecached-->
-		<dependency>
-			<groupId>com.googlecode.xmemcached</groupId>
-			<artifactId>xmemcached</artifactId>
-			<version>2.4.7</version>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>com.googlecode.xmemcached</groupId>-->
+<!--			<artifactId>xmemcached</artifactId>-->
+<!--			<version>2.4.7</version>-->
+<!--		</dependency>-->
 
 
 
