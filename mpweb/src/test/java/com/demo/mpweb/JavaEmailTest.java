@@ -13,6 +13,7 @@ public class JavaEmailTest {
     @Test
     public  void  sendMail()
     {
+        //11
         sendMailService.sendMail();
     }
 }
