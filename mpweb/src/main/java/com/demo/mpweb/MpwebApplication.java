@@ -14,6 +14,7 @@ public class MpwebApplication {
 	public static void main(String[] args) {
 		//System.setProperty("logging.level.root","info");
 		ConfigurableApplicationContext ctx = SpringApplication.run(MpwebApplication.class, args);
+		//获取bean
 		ServerConfig bean =	ctx.getBean(ServerConfig.class);
 		System.out.println(bean.toString());
 		System.out.println("启动成功");
