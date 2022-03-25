@@ -33,6 +33,7 @@ public class ServiceTest {
     @Test
     void  testProperties()
     {
+        System.out.println("printin test");
         System.out.println(bookCase);
     }
 }
