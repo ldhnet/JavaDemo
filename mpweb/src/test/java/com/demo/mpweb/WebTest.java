@@ -44,14 +44,14 @@ public class WebTest {
     @Test
     void  testBody(@Autowired MockMvc mvc) throws Exception {
         //创建虚拟请求
-        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.get("/books/1");
-        ResultActions action = mvc.perform(builder);
-
-        //预期值
-        ContentResultMatchers content = MockMvcResultMatchers.content();
-        ResultMatcher body = content.string("stringboot");
-
-        action.andExpect(body);//与真实值比较
+//        MockHttpServletRequestBuilder builder = MockMvcRequestBuilders.get("/books/1");
+//        ResultActions action = mvc.perform(builder);
+//
+//        //预期值
+//        ContentResultMatchers content = MockMvcResultMatchers.content();
+//        ResultMatcher body = content.string("stringboot");
+//
+//        action.andExpect(body);//与真实值比较
     }
     @Test
     void  testJson(@Autowired MockMvc mvc) throws Exception {
