@@ -10,6 +10,9 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @SpringBootTest
 @Transactional
 @Rollback(value = false)
@@ -30,6 +33,40 @@ public class ServiceTest {
         book.setDescription("springboot7");
         bookService.save(book);
     }
+    @Test
+    void  testUpdate()
+    {
+        Book book=new Book();
+        book.setId(1);
+        book.setName("springboot1111");
+        book.setType("springboot1111");
+        book.setDescription("springboot1111");
+        bookService.updateById(book);
+    }
+    @Test
+    void  testGetAll()
+    {
+        List<Book> all = bookService.getAll();
+        List<Book> list = all.stream().filter(user -> user.getName().indexOf("6") > -1 || user.getDescription().indexOf("3") > -1)
+                .collect(Collectors.toList());
+
+        list.stream().forEach(c->{
+            System.out.println(c.getId() + "===" +c.getName() + "===" + c.getDescription());
+        });
+    }
+    @Test
+    void  testGetAllB()
+    {
+        List<Book> all = bookService.getAll();
+        List<Book> list = all.stream()
+                .filter(user -> user.getName().indexOf("6") > -1 || user.getDescription().indexOf("3") > -1)
+                .collect(Collectors.toList());
+
+        list.stream().forEach(c->{
+            System.out.println(c.getId() + "===" +c.getName() + "===" + c.getDescription());
+        });
+    }
+
     @Test
     void  testProperties()
     {
