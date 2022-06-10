@@ -1,12 +1,11 @@
-package com.demo.mpweb.controller;
+package org.ldh.web.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.demo.mpweb.controller.ulits.OperationResult;
-import com.demo.mpweb.dao.bookDao;
-import com.demo.mpweb.domain.Book;
-import com.demo.mpweb.service.IBookService;
-import io.swagger.annotations.*;
 import lombok.extern.slf4j.Slf4j;
+import org.ldh.web.controller.ulits.OperationResult;
+import org.ldh.web.dao.bookDao;
+import org.ldh.web.domain.Book;
+import org.ldh.web.service.IBookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +16,6 @@ import java.util.logging.Logger;
 @Slf4j
 @RestController
 @RequestMapping("/books")
-@Api(tags = "使用Swagger测试接口信息")  //这个总体接口的信息
 public class bookController {
     //private static final Logger log= LoggerFactory.getLogger(())
     @Autowired
