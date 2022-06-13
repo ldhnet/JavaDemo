@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.ldh.mybatisdemo.mapper.SysUserMapper">
+    <insert id="addUser">
+        insert into sysuser(username,password,age,createtime,updatetime)
+        values(#{user.username},#{user.password},#{user.age},#{user.createtime},#{user.updatetime})
+    </insert>
+
+    <select id="selectUserList" resultType="org.ldh.mybatisdemo.domain.SysUser">
+        select  * from sysuser where 1=1
+    </select>
+    <select id="selectUserById" resultType="org.ldh.mybatisdemo.domain.SysUser">
+        select  * from sysuser where id=#{id}
+    </select>
+    <select id="getUserByName" resultType="org.ldh.mybatisdemo.domain.SysUser">
+        select  * from sysuser where username=#{name}
+    </select>
+</mapper>
