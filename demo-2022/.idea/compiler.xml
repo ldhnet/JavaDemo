@@ -7,8 +7,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="demo-2022" />
+        <module name="ldh-jdbc" />
         <module name="ldh-web" />
+        <module name="demo-2022" />
+        <module name="ldh-mybatis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -18,6 +20,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="ldh-jdbc" options="-parameters" />
+      <module name="ldh-mybatis" options="-parameters" />
       <module name="ldh-web" options="-parameters" />
       <module name="ldh-webdemo" options="-parameters" />
     </option>

@@ -7,6 +7,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/ldh-webdemo/pom.xml" />
         <option value="$PROJECT_DIR$/ldh-web/pom.xml" />
+        <option value="$PROJECT_DIR$/ldh-jdbc/pom.xml" />
+        <option value="$PROJECT_DIR$/ldh-mybatis/pom.xml" />
       </list>
     </option>
   </component>

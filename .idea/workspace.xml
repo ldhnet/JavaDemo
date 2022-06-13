@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35361f1b-1201-4e48-aa7f-d6c71419fe39" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/mpweb/src/main/java/com/demo/mpweb/config/SwaggerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-2022/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-2022/ldh-jdbc/src/main/java/org/ldh/jdbcweb/dao/bookDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demo-2022/ldh-jdbc/src/main/java/org/ldh/jdbcweb/domain/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mpweb/src/main/java/com/demo/mpweb/controller/bookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mpweb/src/main/java/com/demo/mpweb/controller/bookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-2022/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-2022/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-2022/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-2022/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-2022/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-2022/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo-2022/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/demo-2022/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,10 +29,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/JavaDemo/demo-2022"
+    "last_opened_file_path": "D:/JavaDemo/JavaDemo"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
