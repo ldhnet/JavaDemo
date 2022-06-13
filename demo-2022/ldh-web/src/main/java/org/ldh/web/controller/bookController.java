@@ -1,6 +1,8 @@
 package org.ldh.web.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.ldh.web.controller.ulits.OperationResult;
 import org.ldh.web.dao.bookDao;
@@ -16,6 +18,7 @@ import java.util.logging.Logger;
 @Slf4j
 @RestController
 @RequestMapping("/books")
+@Api(value = "图书信息", tags = {"图书信息接口"})
 public class bookController {
     //private static final Logger log= LoggerFactory.getLogger(())
     @Autowired
@@ -27,12 +30,14 @@ public class bookController {
     private String _serverport;
 
     @GetMapping
+    @ApiOperation("查询全部图书")
     public OperationResult getAll() {
         log.error("测试");
         return new OperationResult(true,bookService.list());
     }
 
     @PostMapping
+    @ApiOperation("新增图书")
     public OperationResult saveBook(@RequestBody Book book) throws IOException {
         Boolean flag=bookService.save(book);
         if (book.getName().equals("123"))
@@ -45,11 +50,13 @@ public class bookController {
     }
 
     @PutMapping
+    @ApiOperation("修改图书")
     public OperationResult updateBook(@RequestBody Book book) {
         return new OperationResult(bookService.updateById(book));
     }
 
     @DeleteMapping("/{id}")
+    @ApiOperation("根据ID查询图书")
     public OperationResult deleteBook(@PathVariable Integer id) {
         return new OperationResult(true,bookService.removeById(id));
     }
@@ -62,6 +69,7 @@ public class bookController {
         return new OperationResult(true,bookService.getById(id));
     }
     @GetMapping("/{currentPage}/{pageSize}")
+    @ApiOperation("分页查询图书")
     public OperationResult getPageList(@PathVariable int currentPage, @PathVariable int pageSize,Book book) {
         IPage<Book> page=  bookService.getPage(currentPage, pageSize,book);
         //如果当前页码值大于了总页码值，那么重新执行查询操作，使用最大页码值作为当前页码值

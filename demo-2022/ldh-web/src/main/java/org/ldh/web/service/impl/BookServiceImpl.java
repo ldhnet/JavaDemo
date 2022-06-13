@@ -26,18 +26,6 @@ public class BookServiceImpl extends ServiceImpl<bookDao, Book> implements IBook
     public Book getById(Integer id) {
         return bookDao.selectById(id);
     }
-//    @Override
-//    public Book getCacheById(Integer id) {
-//        Book book=_cache.get(id);
-//        if (book == null)
-//        {
-//            Book queryBook=bookDao.selectById(id);
-//            _cache.put(id,queryBook);
-//            return  queryBook;
-//        }
-//        return book;
-//    }
-
     @Override
     public IPage<Book> getPage(int currentPage, int pageSize) {
         IPage page = new Page(currentPage, pageSize);
