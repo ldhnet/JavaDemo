@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ldh-jdbc" />
         <module name="ldh-web" />
+        <module name="ldh-redis" />
         <module name="demo-2022" />
         <module name="ldh-mybatis" />
       </profile>
@@ -22,6 +23,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="ldh-jdbc" options="-parameters" />
       <module name="ldh-mybatis" options="-parameters" />
+      <module name="ldh-redis" options="-parameters" />
       <module name="ldh-web" options="-parameters" />
       <module name="ldh-webdemo" options="-parameters" />
     </option>
