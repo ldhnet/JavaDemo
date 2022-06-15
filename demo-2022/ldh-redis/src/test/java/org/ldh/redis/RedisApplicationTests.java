@@ -10,4 +10,5 @@ class RedisApplicationTests {
 	void contextLoads() {
 	}
 
+
 }
