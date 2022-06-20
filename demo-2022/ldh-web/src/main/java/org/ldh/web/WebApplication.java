@@ -10,6 +10,8 @@ public class WebApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(WebApplication.class, args);
 		System.out.println("http://localhost:7001/pages/books.html");
+		System.out.println("http://localhost:7001/swagger-ui.html");
+
 		System.out.println("启动成功！");
 	}
 

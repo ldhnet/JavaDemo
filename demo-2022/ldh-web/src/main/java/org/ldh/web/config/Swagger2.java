@@ -38,11 +38,11 @@ public class Swagger2 {
                 .title("ldh-demo标题")
                 .contact(new Contact(
                         "ldh-web-demo",
-                        "http://example.com",
+                        "http://localhost:7001",
                         "574427343@qq.com"))
                 .description("ldh-web api 接口描述信息")
                 .version("1.0.1")
-                .termsOfServiceUrl("http://example.com")
+                .termsOfServiceUrl("http://localhost:7001")
                 .build();
     }
 }
