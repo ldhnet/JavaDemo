@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e9efd46-022c-4e45-9e85-b31291f86fea" name="Changes" comment="Redis limit demo">
-      <change afterPath="$PROJECT_DIR$/ldh-web/src/main/java/org/ldh/web/domain/SMSCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ldh-web/src/test/java/org/ldh/web/Gof_Policy/GroupLabelStrategyServiceFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ldh-web/src/test/java/org/ldh/web/Gof_Policy/Parameter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ldh-web/src/test/java/org/ldh/web/Gof_Policy/Service/IGroupLabelStrategyService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ldh-web/src/test/java/org/ldh/web/Gof_Policy/Service/impl/EnterpriseGroupLablelStrategyServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ldh-web/src/test/java/org/ldh/web/Gof_Policy/Service/impl/MarketListGroupLablelStrategyServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ldh-web/src/main/java/org/ldh/web/WebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ldh-web/src/main/java/org/ldh/web/WebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ldh-web/src/main/java/org/ldh/web/config/Swagger2.java" beforeDir="false" afterPath="$PROJECT_DIR$/ldh-web/src/main/java/org/ldh/web/config/Swagger2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ldh-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ldh-web/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,20 +47,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/JavaDemo/JavaDemo",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\JavaDemo\JavaDemo\demo-2022\ldh-redis\src\test\java\org\ldh\redis" />
@@ -233,6 +226,11 @@
           <url>file://$PROJECT_DIR$/ldh-redis/src/test/java/org/ldh/redis/RedisLimitTests.java</url>
           <line>30</line>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ldh-web/src/test/java/org/ldh/web/WebApplicationTests.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
