@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e9efd46-022c-4e45-9e85-b31291f86fea" name="Changes" comment="Redis limit demo">
-      <change afterPath="$PROJECT_DIR$/ldh-web/src/main/java/org/ldh/web/domain/SMSCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ldh-web/src/main/java/org/ldh/web/config/CorsConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ldh-web/src/main/java/org/ldh/web/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ldh-web/src/main/java/org/ldh/web/dao/userDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ldh-web/src/main/java/org/ldh/web/domain/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ldh-web/src/main/java/org/ldh/web/service/IUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ldh-web/src/main/java/org/ldh/web/service/impl/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ldh-web/src/main/java/org/ldh/web/WebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/ldh-web/src/main/java/org/ldh/web/WebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ldh-web/src/main/java/org/ldh/web/config/Swagger2.java" beforeDir="false" afterPath="$PROJECT_DIR$/ldh-web/src/main/java/org/ldh/web/config/Swagger2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ldh-web/src/main/java/org/ldh/web/controller/userController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ldh-web/src/main/java/org/ldh/web/controller/usertestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ldh-web/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ldh-web/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +59,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "D:/JavaDemo/JavaDemo",
+    "last_opened_file_path": "D:/JavaDemo/JavaDemo/demo-2022/ldh-web/src/main/java/org/ldh/web/domain",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
@@ -63,13 +67,16 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JavaDemo\JavaDemo\demo-2022\ldh-web\src\main\java\org\ldh\web\domain" />
+      <recent name="D:\JavaDemo\JavaDemo\demo-2022\ldh-web\src\main\java\org\ldh\web\controller" />
+      <recent name="D:\JavaDemo\JavaDemo\demo-2022\ldh-web\src\main\java\org\ldh\web\config" />
       <recent name="D:\JavaDemo\JavaDemo\demo-2022\ldh-redis\src\test\java\org\ldh\redis" />
       <recent name="D:\JavaDemo\JavaDemo\demo-2022\ldh-redis\src\main\java\org\ldh\redis\conf" />
-      <recent name="D:\JavaDemo\JavaDemo\demo-2022\ldh-redis\src\main\java\org\ldh\redis" />
-      <recent name="D:\JavaDemo\JavaDemo\demo-2022\ldh-mybatis\src\main\java\org\ldh\mybatisdemo" />
-      <recent name="D:\JavaDemo\JavaDemo\demo-2022\ldh-jdbc\src\main\java\org\ldh\jdbcweb" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.ldh.web.service.impl" />
+      <recent name="org.ldh.web.service" />
+      <recent name="org.ldh.web.dao" />
       <recent name="org.ldh.web" />
     </key>
   </component>
@@ -214,11 +221,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/ldh-web/src/main/java/org/ldh/web/controller/bookController.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/ldh-mybatis/src/main/java/org/ldh/mybatisdemo/service/impl/UserService.java</url>
           <line>18</line>
