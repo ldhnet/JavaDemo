@@ -33,7 +33,7 @@ public class bookController {
     @ApiOperation("查询全部图书")
     public OperationResult getAll() {
         log.error("测试");
-        return new OperationResult(true,bookService.list());
+        return new OperationResult(200,bookService.list());
     }
 
     @PostMapping
@@ -46,19 +46,19 @@ public class bookController {
             throw new IOException();
         }
 
-        return new OperationResult(flag,flag?"添加成功6^_^":"添加失败-_-");
+        return new OperationResult(200,flag?"添加成功6^_^":"添加失败-_-");
     }
 
     @PutMapping
     @ApiOperation("修改图书")
     public OperationResult updateBook(@RequestBody Book book) {
-        return new OperationResult(bookService.updateById(book));
+        return new OperationResult(bookService.updateById(book)?200:400);
     }
 
     @DeleteMapping("/{id}")
     @ApiOperation("根据ID查询图书")
     public OperationResult deleteBook(@PathVariable Integer id) {
-        return new OperationResult(true,bookService.removeById(id));
+        return new OperationResult(200,bookService.removeById(id));
     }
 
     @GetMapping("/{id}")
@@ -66,7 +66,7 @@ public class bookController {
         System.out.println("hot deploy .....");
         System.out.println("hot deploy .....");
         System.out.println(_serverport);
-        return new OperationResult(true,bookService.getById(id));
+        return new OperationResult(200,bookService.getById(id));
     }
     @GetMapping("/{currentPage}/{pageSize}")
     @ApiOperation("分页查询图书")
@@ -77,7 +77,7 @@ public class bookController {
         {
             page =bookService.getPage((int)page.getPages(), pageSize,book);
         }
-        return new OperationResult(true,page);
+        return new OperationResult(200,page);
     }
 
 }

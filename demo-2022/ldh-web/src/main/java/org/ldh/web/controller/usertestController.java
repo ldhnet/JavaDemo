@@ -20,14 +20,14 @@ public class usertestController {
     private bookDao _bookDao;
     @Autowired
     private IUserService userService;
-//    @GetMapping
-//    public OperationResult getAll() {
-//        log.error("测试");
-//        return new OperationResult(true,bookService.list());
-//    }
-    @GetMapping
+    @GetMapping("BookList")
     public OperationResult getAll() {
         log.error("测试");
-        return new OperationResult(true,userService.getAll());
+        return new OperationResult(200,bookService.list());
+    }
+    @GetMapping("UserList")
+    public OperationResult getUserList() {
+        log.error("测试");
+        return new OperationResult(200,userService.list());
     }
 }

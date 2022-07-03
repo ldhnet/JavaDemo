@@ -11,6 +11,6 @@ public class ProjectExceptionAdvice {
         //记录日志
         //通知开发
         ex.printStackTrace();
-        return new  OperationResult(false,"服务器故障，请联系管理员,exmsg=" + ex.getMessage());
+        return new  OperationResult(500,"服务器故障，请联系管理员,exmsg=" + ex.getMessage());
     }
 }

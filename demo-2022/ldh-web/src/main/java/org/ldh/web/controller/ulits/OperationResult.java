@@ -4,22 +4,40 @@ import lombok.Data;
 
 @Data
 public class OperationResult {
-    private Boolean flag;
+    private int code;
     private Object data;
     private String msg;
     public OperationResult(){}
-    public OperationResult(Boolean flag)
+    public OperationResult(int code)
     {
-        this.flag=flag;
+        this.code=code;
     }
-    public OperationResult(Boolean flag,Object data)
+    public OperationResult(int code,Object data)
     {
-        this.flag=flag;
+        this.code=code;
         this.data=data;
     }
-    public OperationResult(Boolean flag,String msg)
+    public OperationResult(int code,String msg)
     {
-        this.flag=flag;
+        this.code=code;
         this.msg=msg;
     }
 }
+//
+//public  class CodeResult<T> {
+//    private Boolean isSuccess;
+//    private Integer code;
+//    private String msg;
+//    private T data;
+//    public CodeResult(){
+//
+//    }
+//    public static <T> CodeResult<T> newSuccessResult(T data) {
+//        CodeResult<T> codeResult=new CodeResult<>();
+//        codeResult.setCode(200);
+//        codeResult.setIsSuccess(true);
+//        codeResult.setMsg("操作成功");
+//        codeResult.setData(data);
+//        return codeResult;
+//    }
+//}
